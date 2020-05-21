@@ -1,0 +1,50 @@
+{
+  "name": "link-self",
+  "version": "0.0.0",
+  "description": "Enables modules to self-reference the package they exist in",
+  "keywords": [
+    "self",
+    "link",
+    "module",
+    "package",
+    "require"
+  ],
+  "author": "BTOdell",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BTOdell/link-self.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BTOdell/link-self/issues"
+  },
+  "homepage": "https://github.com/BTOdell/link-self",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "bin": {
+    "link-self": "./cli/cli.js"
+  },
+  "files": [
+    "dist/**/*.js",
+    "bin/**/*.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.4",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2",
+    "npm-run-all": "^4.1.5",
+    "shx": "^0.3.2",
+    "typescript": "^3.9.3"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "pretest": "npm run build",
+    "test": "npm run test-fast",
+    "test-fast": "tsc -b test && mocha",
+    "prepublishOnly": "npm run build",
+    "clean": "shx rm -rf ./dist ./bin ./test/**/*.js ./**/*.tsbuildinfo"
+  }
+}

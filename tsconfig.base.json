@@ -1,0 +1,17 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "module": "CommonJS",
+    "target": "ES5",
+    "lib": [
+      "ES5"
+    ],
+    "types": ["node"],
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": false,
+    "strict": true,
+    "noImplicitReturns": true
+  }
+}
