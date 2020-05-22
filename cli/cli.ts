@@ -58,7 +58,6 @@ const linkPath: string = join(nodeModulesDirectory, packageName);
 symlink(relative(nodeModulesDirectory, packageDirectory), linkPath, "dir", function(err) {
     if (err) {
         if (err.code === "EEXIST") {
-            console.warn("File/dir/symlink already exists.");
             return;
         }
         throw err;

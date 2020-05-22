@@ -1,6 +1,6 @@
 {
   "name": "link-self",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Enables modules to self-reference the package they exist in",
   "keywords": [
     "self",
