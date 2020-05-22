@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true
+  },
   "files": [],
   "references": [
     { "path": "src" },

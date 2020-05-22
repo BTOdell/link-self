@@ -1,6 +1,6 @@
 {
   "name": "link-self",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Enables modules to self-reference the package they exist in",
   "keywords": [
     "self",
@@ -22,7 +22,7 @@
   "type": "commonjs",
   "main": "./dist/index.js",
   "bin": {
-    "link-self": "./cli/cli.js"
+    "link-self": "./bin/cli.js"
   },
   "files": [
     "dist/**/*.js",
@@ -41,10 +41,11 @@
   },
   "scripts": {
     "build": "tsc -b",
-    "pretest": "npm run build",
-    "test": "npm run test-fast",
-    "test-fast": "tsc -b test && mocha",
+    "test": "tsc -b test && mocha",
     "prepublishOnly": "npm run build",
-    "clean": "shx rm -rf ./dist ./bin ./test/**/*.js ./**/*.tsbuildinfo"
+    "clean": "shx rm -rf ./dist ./bin ./test/**/*.js ./test/**/*.js.map ./**/*.tsbuildinfo"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   }
 }

@@ -16,4 +16,5 @@
 
 # Test output files
 /test/**/*.js
+/test/**/*.js.map
 /test/**/*.d.ts

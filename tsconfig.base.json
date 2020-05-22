@@ -10,7 +10,8 @@
     ],
     "types": ["node"],
     "forceConsistentCasingInFileNames": true,
-    "sourceMap": false,
+    "sourceMap": true,
+    "removeComments": true,
     "strict": true,
     "noImplicitReturns": true
   }
